@@ -14,7 +14,7 @@
         <img [src]="v.thumb" />
       </ion-avatar>
       <ion-label>{{v.title}}</ion-label>
-      <ion-button slot="end" fill="clean" size="large">
+      <ion-button slot="end" fill="clean" size="large" (click)="play(v.url)">
         <ion-icon name="play-circle-outline"></ion-icon>
       </ion-button>
 
