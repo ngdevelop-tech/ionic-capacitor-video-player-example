@@ -1,25 +1,24 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
+<ion-header [translucent]="true" >
+  <ion-toolbar color="primary">
     <ion-title>
-      Inbox
+      NG Video Player
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
-    <ion-refresher-content></ion-refresher-content>
-  </ion-refresher>
-  
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">
-        Inbox
-      </ion-title>
-    </ion-toolbar>
-  </ion-header>
-  
+
   <ion-list>
-    <app-message *ngFor="let message of getMessages()" [message]="message"></app-message>
+    <ion-item *ngFor="let v of videos">
+      <ion-avatar slot="start">
+        <img [src]="v.thumb" />
+      </ion-avatar>
+      <ion-label>{{v.title}}</ion-label>
+      <ion-button slot="end" fill="clean" size="large">
+        <ion-icon name="play-circle-outline"></ion-icon>
+      </ion-button>
+
+    </ion-item>
+
   </ion-list>
 </ion-content>

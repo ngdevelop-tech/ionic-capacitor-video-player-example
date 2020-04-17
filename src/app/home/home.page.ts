@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DataService, Message } from '../services/data.service';
+import { DataService, Video } from '../services/data.service';
 
 @Component({
   selector: 'app-home',
@@ -7,16 +7,13 @@ import { DataService, Message } from '../services/data.service';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  constructor(private data: DataService) {}
-
-  refresh(ev) {
-    setTimeout(() => {
-      ev.detail.complete();
-    }, 3000);
+  videos: Video[];
+  
+  constructor(private data: DataService) {
+    this.videos = data.getVidoes();
   }
 
-  getMessages(): Message[] {
-    return this.data.getMessages();
-  }
 
+
+  
 }
