@@ -4,7 +4,7 @@ Purpose of this project is to learn how to use capacitor video player plugin in 
 We have developed this application for mobile devices and web devices.
 
 ## Blog & Documentation
-[Ionic Video Player for Mobile and Web using Capacitor Video Player Plugin](ionic-capacitor-video-player-mobile-and-web)
+[Ionic Video Player for Mobile and Web using Capacitor Video Player Plugin](https://www.ngdevelop.tech/blog/ionic-capacitor-video-player-mobile-and-web)
 
 #### This blog includes following topics
 - Why Ionic ?
